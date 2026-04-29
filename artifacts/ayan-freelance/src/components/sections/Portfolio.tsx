@@ -3,6 +3,15 @@ import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
+    id: "atsfy-ecosystem",
+    title: "ATSFy Ecosystem",
+    subtitle: "Building the Future of AI Infrastructure",
+    image: "/images/portfolio-atsfy-ecosystem.png",
+    outcome: "An interconnected ecosystem — from talent readiness to financial growth — emerging from the Northeast for India and beyond.",
+    tech: ["Ecosystem Design", "AI Infrastructure", "Northeast India", "Strategy"],
+    link: "https://infoatsfyecosystem.netlify.app/"
+  },
+  {
     id: "ventureval",
     title: "VentureVal",
     subtitle: "Startup Evaluation for Investors & Incubators",

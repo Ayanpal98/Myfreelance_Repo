@@ -48,3 +48,9 @@ id = "wBXuPqn7DVH0JqVij3VvN"
 uri = "file://artifacts/ayan-freelance/public/images/portfolio-ventureval.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "xjSRg3xKUvw7mHEc4Ynum"
+uri = "file://artifacts/ayan-freelance/public/images/portfolio-atsfy-ecosystem.png"
+type = "image"
+title = "generated_image"
