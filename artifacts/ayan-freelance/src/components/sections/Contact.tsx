@@ -1,7 +1,111 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { MessageCircle, Calendar, QrCode, Send, Phone, Mail } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { MessageCircle, Calendar, QrCode, Send, Phone, Mail, ChevronDown } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+
+type ComboboxProps = {
+  value: string;
+  onChange: (next: string) => void;
+  options: string[];
+  placeholder?: string;
+  required?: boolean;
+  name?: string;
+};
+
+function Combobox({ value, onChange, options, placeholder, required, name }: ComboboxProps) {
+  const [open, setOpen] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onDocClick = (e: MouseEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onDocClick);
+    return () => document.removeEventListener("mousedown", onDocClick);
+  }, []);
+
+  const filtered = value.trim()
+    ? options.filter((opt) => opt.toLowerCase().includes(value.toLowerCase()))
+    : options;
+
+  return (
+    <div className="relative" ref={wrapperRef}>
+      <input
+        required={required}
+        type="text"
+        name={name}
+        value={value}
+        onChange={(e) => {
+          onChange(e.target.value);
+          setOpen(true);
+        }}
+        onFocus={() => setOpen(true)}
+        autoComplete="off"
+        className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 pr-10 text-white focus:outline-none focus:border-primary transition-colors"
+        placeholder={placeholder}
+      />
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-label="Toggle suggestions"
+        className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-md text-muted-foreground hover:text-white hover:bg-white/5 transition-colors"
+      >
+        <ChevronDown size={16} className={`transition-transform ${open ? "rotate-180" : ""}`} />
+      </button>
+
+      {open && filtered.length > 0 && (
+        <ul
+          role="listbox"
+          className="absolute z-30 left-0 right-0 mt-2 max-h-64 overflow-y-auto rounded-xl border border-white/10 bg-[#0d0d11]/95 backdrop-blur-xl shadow-2xl shadow-black/60 py-1"
+        >
+          {filtered.map((opt) => {
+            const selected = opt === value;
+            return (
+              <li key={opt}>
+                <button
+                  type="button"
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => {
+                    onChange(opt);
+                    setOpen(false);
+                  }}
+                  className={`w-full text-left px-4 py-2.5 text-sm transition-colors ${
+                    selected
+                      ? "bg-primary/15 text-primary"
+                      : "text-white/85 hover:bg-white/5 hover:text-white"
+                  }`}
+                >
+                  {opt}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+const SERVICE_OPTIONS = [
+  "AI Product Development",
+  "Resume Intelligence (ATSFy)",
+  "AI / ML Consulting",
+  "EU AI Act Compliance",
+  "Technical Writing",
+  "MedTech MVP / Acquisition",
+  "Other",
+];
+
+const BUDGET_OPTIONS = [
+  "< Rs. 10,000",
+  "Rs. 10,000 - 25,000",
+  "Rs. 25,000 - 50,000",
+  "Rs. 50,000 - 1,00,000",
+  "> Rs. 1,00,000",
+  "Not sure yet",
+];
 
 export function Contact() {
   const { toast } = useToast();
@@ -83,46 +187,25 @@ export function Contact() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-mono text-white/70 uppercase">Service Interest</label>
-                  <input
+                  <Combobox
                     required
-                    type="text"
                     name="service"
-                    list="service-options"
                     value={formData.service}
-                    onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    onChange={(v) => setFormData((d) => ({ ...d, service: v }))}
+                    options={SERVICE_OPTIONS}
                     placeholder="Pick one or type your own"
                   />
-                  <datalist id="service-options">
-                    <option value="AI Product Development" />
-                    <option value="Resume Intelligence (ATSFy)" />
-                    <option value="AI / ML Consulting" />
-                    <option value="EU AI Act Compliance" />
-                    <option value="Technical Writing" />
-                    <option value="MedTech MVP / Acquisition" />
-                    <option value="Other" />
-                  </datalist>
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-mono text-white/70 uppercase">Project Budget</label>
-                  <input
+                  <Combobox
                     required
-                    type="text"
                     name="budget"
-                    list="budget-options"
                     value={formData.budget}
-                    onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    onChange={(v) => setFormData((d) => ({ ...d, budget: v }))}
+                    options={BUDGET_OPTIONS}
                     placeholder="Pick a range or type your own"
                   />
-                  <datalist id="budget-options">
-                    <option value="< Rs. 10,000" />
-                    <option value="Rs. 10,000 - 25,000" />
-                    <option value="Rs. 25,000 - 50,000" />
-                    <option value="Rs. 50,000 - 1,00,000" />
-                    <option value="> Rs. 1,00,000" />
-                    <option value="Not sure yet" />
-                  </datalist>
                 </div>
               </div>
               
