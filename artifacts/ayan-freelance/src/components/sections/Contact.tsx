@@ -198,21 +198,30 @@ export function Contact() {
               </div>
             </a>
             
-            <div className="glass-card p-6 rounded-2xl flex items-center gap-6 group relative overflow-hidden">
-              <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                <QrCode size={28} />
+            <div className="glass-card p-6 rounded-2xl">
+              <div className="flex items-center gap-6 mb-4">
+                <div className="w-14 h-14 rounded-full bg-[#5F259F]/20 flex items-center justify-center text-[#a78bfa]">
+                  <QrCode size={28} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">PhonePe / UPI</h3>
+                  <p className="text-sm text-muted-foreground font-mono mt-1">Scan & pay — AYAN PAL</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white">UPI Payment</h3>
-                <p className="text-sm text-muted-foreground font-mono mt-1">ayan@upi</p>
-              </div>
-              
-              {/* Dummy QR visual */}
-              <div className="absolute right-6 opacity-20 group-hover:opacity-100 transition-opacity">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v3h-3v-3zm-3 3h3v3h-3v-3zm3 3h3v3h-3v-3zm-3-3h-3v-3h3v3zm-3 3h3v3h-3v-3z"/>
-                </svg>
-              </div>
+              <a
+                href="/images/upi-phonepe-qr.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-xl overflow-hidden bg-black border border-white/10 hover:border-white/20 transition-colors"
+                aria-label="Open PhonePe QR in full size"
+              >
+                <img
+                  src="/images/upi-phonepe-qr.png"
+                  alt="PhonePe UPI QR code for Ayan Pal"
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </motion.div>
           
