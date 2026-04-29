@@ -3,6 +3,15 @@ import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
+    id: "medtech",
+    title: "MedTech Opportunity in Tripura",
+    subtitle: "Northeast India Healthcare Blueprint",
+    image: "/images/portfolio-medtech.png",
+    outcome: "Four high-impact, commercially sustainable healthcare technology interventions for a region with zero MedTech startups and 4,000+ frontline health workers operating without digital tools.",
+    tech: ["Research", "Strategy", "ASHA Workflows", "Public Health"],
+    link: "https://m-edtech-ashasetu.vercel.app/"
+  },
+  {
     id: "atsfy",
     title: "ATSFy",
     subtitle: "AI Resume Intelligence Platform",
@@ -82,7 +91,12 @@ export function Portfolio() {
                     ))}
                   </div>
                   
-                  <a href={project.link} className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-primary transition-colors mt-auto w-fit">
+                  <a
+                    href={project.link}
+                    target={project.link.startsWith("http") ? "_blank" : undefined}
+                    rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-primary transition-colors mt-auto w-fit"
+                  >
                     View case study <ArrowRight size={16} />
                   </a>
                 </div>
