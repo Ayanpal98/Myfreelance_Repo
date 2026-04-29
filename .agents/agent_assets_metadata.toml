@@ -36,3 +36,9 @@ id = "TxGPzj3tBBZZdBHWV9tH5"
 uri = "file://artifacts/ayan-freelance/public/images/portfolio-medtech.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "3EaZm4hR0G4lCAsQ5vC8E"
+uri = "file://artifacts/ayan-freelance/public/images/portfolio-teevibe.png"
+type = "image"
+title = "generated_image"

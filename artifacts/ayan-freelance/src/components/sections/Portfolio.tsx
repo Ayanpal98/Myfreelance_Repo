@@ -3,6 +3,15 @@ import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
+    id: "teevibe",
+    title: "TeeVibe — Wear Your Vibe",
+    subtitle: "Premium Streetwear E-Commerce",
+    image: "/images/portfolio-teevibe.png",
+    outcome: "Premium-quality T-shirts designed for those who dare to express themselves — from streetwear to minimalist, a curated storefront that helps shoppers find their perfect fit.",
+    tech: ["React", "E-Commerce", "Brand Design", "Lovable"],
+    link: "https://teevibe-vibe-cart.lovable.app/"
+  },
+  {
     id: "medtech",
     title: "MedTech Opportunity in Tripura",
     subtitle: "Northeast India Healthcare Blueprint",
