@@ -42,7 +42,7 @@ export function Hero() {
               Book a Discovery Call <ArrowRight size={18} />
             </button>
             <a 
-              href="https://wa.me/919999999999?text=Hi%20Ayan,%20I'd%20like%20to%20discuss%20a%20project."
+              href="https://wa.me/919862510477?text=Hi%20Ayan,%20I'd%20like%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-full glass-panel text-white font-medium flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"

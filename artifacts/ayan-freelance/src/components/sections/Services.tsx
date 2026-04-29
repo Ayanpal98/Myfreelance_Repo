@@ -108,7 +108,7 @@ export function Services() {
                 </div>
                 
                 <a
-                  href={`https://wa.me/919999999999?text=Hi%20Ayan,%20I'm%20interested%20in%20getting%20a%20quote%20for%20${encodeURIComponent(service.title)}.`}
+                  href={`https://wa.me/919862510477?text=Hi%20Ayan,%20I'm%20interested%20in%20getting%20a%20quote%20for%20${encodeURIComponent(service.title)}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-2.5 rounded-lg text-sm font-medium flex items-center justify-center transition-colors ${

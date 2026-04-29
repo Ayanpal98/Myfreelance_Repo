@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { MessageCircle, Calendar, QrCode, Send } from "lucide-react";
+import { MessageCircle, Calendar, QrCode, Send, Phone, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export function Contact() {
@@ -22,7 +22,7 @@ export function Contact() {
       `Name: ${formData.name}\nEmail: ${formData.email}\nBudget: ${formData.budget}\n\nMessage:\n${formData.message}`
     );
     
-    window.location.href = `mailto:ayan@atsfy.tech?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info.atsfy@gmail.com?subject=${subject}&body=${body}`;
     
     toast({
       title: "Email client opened",
@@ -143,7 +143,7 @@ export function Contact() {
             className="lg:col-span-5 flex flex-col gap-4"
           >
             <a 
-              href="https://wa.me/919999999999?text=Hi%20Ayan"
+              href="https://wa.me/919862510477?text=Hi%20Ayan%2C%20I%27d%20like%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card p-6 rounded-2xl flex items-center gap-6 hover:bg-white/5 transition-colors group"
@@ -153,10 +153,36 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white">WhatsApp Business</h3>
-                <p className="text-sm text-muted-foreground font-mono mt-1">Fastest response time</p>
+                <p className="text-sm text-muted-foreground font-mono mt-1">+91 98625 10477</p>
               </div>
             </a>
-            
+
+            <a
+              href="tel:+919862510477"
+              className="glass-card p-6 rounded-2xl flex items-center gap-6 hover:bg-white/5 transition-colors group"
+            >
+              <div className="w-14 h-14 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+                <Phone size={28} />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white">Call Direct</h3>
+                <p className="text-sm text-muted-foreground font-mono mt-1">+91 98625 10477</p>
+              </div>
+            </a>
+
+            <a
+              href="mailto:info.atsfy@gmail.com"
+              className="glass-card p-6 rounded-2xl flex items-center gap-6 hover:bg-white/5 transition-colors group"
+            >
+              <div className="w-14 h-14 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
+                <Mail size={28} />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white">Email</h3>
+                <p className="text-sm text-muted-foreground font-mono mt-1 break-all">info.atsfy@gmail.com</p>
+              </div>
+            </a>
+
             <a 
               href="https://calendly.com/ayan/discovery"
               target="_blank"
