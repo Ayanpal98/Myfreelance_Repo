@@ -83,33 +83,46 @@ export function Contact() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-mono text-white/70 uppercase">Service Interest</label>
-                  <select 
+                  <input
+                    required
+                    type="text"
                     name="service"
+                    list="service-options"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors appearance-none"
-                  >
-                    <option value="AI Product Development">AI Product Development</option>
-                    <option value="Resume Intelligence">Resume Intelligence (ATSFy)</option>
-                    <option value="AI / ML Consulting">AI / ML Consulting</option>
-                    <option value="EU AI Act Compliance">EU AI Act Compliance</option>
-                    <option value="Technical Writing">Technical Writing</option>
-                  </select>
+                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    placeholder="Pick one or type your own"
+                  />
+                  <datalist id="service-options">
+                    <option value="AI Product Development" />
+                    <option value="Resume Intelligence (ATSFy)" />
+                    <option value="AI / ML Consulting" />
+                    <option value="EU AI Act Compliance" />
+                    <option value="Technical Writing" />
+                    <option value="MedTech MVP / Acquisition" />
+                    <option value="Other" />
+                  </datalist>
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-mono text-white/70 uppercase">Project Budget</label>
-                  <select 
+                  <input
+                    required
+                    type="text"
                     name="budget"
+                    list="budget-options"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors appearance-none"
-                  >
-                    <option value="< Rs. 10k">&lt; Rs. 10,000</option>
-                    <option value="Rs. 10k - 25k">Rs. 10,000 - 25,000</option>
-                    <option value="Rs. 25k - 50k">Rs. 25,000 - 50,000</option>
-                    <option value="Rs. 50k - 1L">Rs. 50,000 - 1,00,000</option>
-                    <option value="> Rs. 1L">&gt; Rs. 1,00,000</option>
-                  </select>
+                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    placeholder="Pick a range or type your own"
+                  />
+                  <datalist id="budget-options">
+                    <option value="< Rs. 10,000" />
+                    <option value="Rs. 10,000 - 25,000" />
+                    <option value="Rs. 25,000 - 50,000" />
+                    <option value="Rs. 50,000 - 1,00,000" />
+                    <option value="> Rs. 1,00,000" />
+                    <option value="Not sure yet" />
+                  </datalist>
                 </div>
               </div>
               
