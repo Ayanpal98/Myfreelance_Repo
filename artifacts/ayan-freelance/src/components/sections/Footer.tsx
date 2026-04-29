@@ -13,16 +13,16 @@ export function Footer() {
           </div>
           
           <div className="flex items-center gap-6">
-            <a href="#" className="text-white/60 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/atsfy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-white/60 hover:text-white transition-colors">
               <FaLinkedin size={20} />
             </a>
-            <a href="#" className="text-white/60 hover:text-white transition-colors">
+            <a href="https://x.com/AtsfyInfo" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-white/60 hover:text-white transition-colors">
               <FaXTwitter size={20} />
             </a>
-            <a href="#" className="text-white/60 hover:text-white transition-colors">
+            <a href="https://medium.com/@ayanpal0698" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-white/60 hover:text-white transition-colors">
               <FaMedium size={20} />
             </a>
-            <a href="#" className="text-white/60 hover:text-white transition-colors">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-white/60 hover:text-white transition-colors">
               <FaGithub size={20} />
             </a>
           </div>

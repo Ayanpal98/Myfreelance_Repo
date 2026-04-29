@@ -30,7 +30,7 @@ export function BlogTeaser() {
               Thoughts on AI product development, compliance, and startup lessons.
             </p>
           </div>
-          <a href="#" className="hidden md:inline-flex items-center gap-2 text-white hover:text-primary transition-colors font-medium">
+          <a href="https://medium.com/@ayanpal0698" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-2 text-white hover:text-primary transition-colors font-medium">
             View all <ArrowRight size={18} />
           </a>
         </div>
@@ -52,7 +52,7 @@ export function BlogTeaser() {
               <p className="text-muted-foreground text-sm mb-8 flex-grow leading-relaxed">
                 {post.excerpt}
               </p>
-              <a href="#" className="inline-flex items-center gap-2 text-sm font-medium text-white/70 group-hover:text-white transition-colors mt-auto">
+              <a href="https://medium.com/@ayanpal0698" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-white/70 group-hover:text-white transition-colors mt-auto">
                 Read on Medium <ArrowRight size={16} />
               </a>
             </motion.div>
@@ -60,7 +60,7 @@ export function BlogTeaser() {
         </div>
         
         <div className="mt-8 text-center md:hidden">
-          <a href="#" className="inline-flex items-center gap-2 text-white font-medium">
+          <a href="https://medium.com/@ayanpal0698" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white font-medium">
             View all writing <ArrowRight size={18} />
           </a>
         </div>

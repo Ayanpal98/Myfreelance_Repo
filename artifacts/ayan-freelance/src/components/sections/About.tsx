@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Award, BookOpen, ShieldCheck } from "lucide-react";
+import { MapPin, Award, BookOpen, ShieldCheck, ArrowUpRight } from "lucide-react";
 
 export function About() {
   return (
@@ -33,6 +33,16 @@ export function About() {
               <MapPin size={16} className="text-primary" />
               <span>Based in Agartala, Tripura, India</span>
             </div>
+
+            <a
+              href="https://founder-showcase-star.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-full glass-card border border-white/10 text-sm font-medium text-white hover:border-primary/50 hover:text-primary transition-colors w-fit"
+            >
+              View Founder Showcase
+              <ArrowUpRight size={16} />
+            </a>
           </motion.div>
           
           <motion.div 
