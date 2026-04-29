@@ -42,3 +42,9 @@ id = "3EaZm4hR0G4lCAsQ5vC8E"
 uri = "file://artifacts/ayan-freelance/public/images/portfolio-teevibe.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "wBXuPqn7DVH0JqVij3VvN"
+uri = "file://artifacts/ayan-freelance/public/images/portfolio-ventureval.png"
+type = "image"
+title = "generated_image"

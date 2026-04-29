@@ -3,6 +3,15 @@ import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
+    id: "ventureval",
+    title: "VentureVal",
+    subtitle: "Startup Evaluation for Investors & Incubators",
+    image: "/images/portfolio-ventureval.png",
+    outcome: "Decode startup potential before you invest. Rates ventures on real-world impact, solution viability, and market readiness — built for incubators and investors who need clarity, not hype.",
+    tech: ["React", "Scoring Engine", "Investor Tooling", "Lovable"],
+    link: "https://ventureval.lovable.app/"
+  },
+  {
     id: "teevibe",
     title: "TeeVibe — Wear Your Vibe",
     subtitle: "Premium Streetwear E-Commerce",
