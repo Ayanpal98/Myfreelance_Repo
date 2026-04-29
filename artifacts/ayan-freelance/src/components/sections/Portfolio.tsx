@@ -45,7 +45,7 @@ const projects = [
     image: "/images/portfolio-atsfy.png",
     outcome: "The only product offering candidate-facing personalised action plans based on semantic matching.",
     tech: ["React", "Node", "OpenAI", "Postgres"],
-    link: "#"
+    link: "https://atsfycareerintelligentplatform.lovable.app/"
   },
   {
     id: "green",
@@ -54,7 +54,7 @@ const projects = [
     image: "/images/portfolio-green.png",
     outcome: "Transforms compliance overhead into measurable business revenue using AI agent pipelines.",
     tech: ["Next.js", "AI Agents", "Python"],
-    link: "#"
+    link: "https://green-to-gold.vercel.app/"
   },
   {
     id: "finance",
