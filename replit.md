@@ -25,3 +25,9 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## Artifacts
+
+- **ayan-freelance** (`artifacts/ayan-freelance`, `/`) — Single-page presentation site for Ayan's freelance services. Dark glassmorphism aesthetic, 6 services with INR pricing, portfolio, social proof, contact form (mailto), WhatsApp/Calendly/UPI CTAs, blog teaser. Frontend-only React + Vite + Tailwind + Framer Motion.
+- **api-server** — Shared Express API (currently only `/api/healthz`).
+- **mockup-sandbox** — Canvas mockup sandbox.

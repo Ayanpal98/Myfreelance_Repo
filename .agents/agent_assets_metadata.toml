@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "aU2FHGk4ZPShPOWo6Tnm-"
+uri = "file://artifacts/ayan-freelance/public/images/hero-portrait.png"
+type = "image"
+title = "Hero portrait of Ayan"
+
+[[generated]]
+id = "PaytLn0xdqyWl9RLcCsQE"
+uri = "file://artifacts/ayan-freelance/public/images/bg-texture.png"
+type = "image"
+title = "Abstract dark glassmorphism background"
+
+[[generated]]
+id = "wdTiNopqPfnnO81a9e7W-"
+uri = "file://artifacts/ayan-freelance/public/images/portfolio-atsfy.png"
+type = "image"
+title = "AI Resume Platform UI abstract"
+
+[[generated]]
+id = "4Q3zkx6hCSrxq6tkg9-x9"
+uri = "file://artifacts/ayan-freelance/public/images/portfolio-green.png"
+type = "image"
+title = "Sustainability AI product abstract"
+
+[[generated]]
+id = "bjyyPTP4uIkxVnspy3CCl"
+uri = "file://artifacts/ayan-freelance/public/images/portfolio-finance.png"
+type = "image"
+title = "Finance AI product abstract"
