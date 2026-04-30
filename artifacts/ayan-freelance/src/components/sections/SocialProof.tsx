@@ -22,7 +22,7 @@ const testimonials = [
 const stats = [
   { value: "267+", label: "Resumes & Career Intelligence Reports" },
   { value: "40+", label: "Pieces Published" },
-  { value: "17+", label: "Clients Served" },
+  { value: "50+", label: "Clients Served" },
   { value: "1", label: "India AI Summit Feature" }
 ];
 
