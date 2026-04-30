@@ -77,7 +77,7 @@ export function Hero() {
         >
           <div className="aspect-[4/5] rounded-2xl glass-panel p-2 rotate-2 hover:rotate-0 transition-transform duration-500">
             <img 
-              src="/images/hero-portrait.jpg" 
+              src="/images/hero-portrait.png" 
               alt="Ayan - AI Consultant" 
               className="w-full h-full object-cover rounded-xl grayscale-[0.2] contrast-125"
             />
