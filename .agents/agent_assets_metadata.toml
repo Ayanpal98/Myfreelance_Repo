@@ -54,3 +54,9 @@ id = "xjSRg3xKUvw7mHEc4Ynum"
 uri = "file://artifacts/ayan-freelance/public/images/portfolio-atsfy-ecosystem.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "OrovPVmMKToVviKZy99BA"
+uri = "file://artifacts/ayan-freelance/public/images/logo-3d.png"
+type = "image"
+title = "generated_image"

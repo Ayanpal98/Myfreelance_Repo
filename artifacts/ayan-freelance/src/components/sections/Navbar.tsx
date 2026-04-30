@@ -39,9 +39,15 @@ export function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <button 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-xl font-bold font-sans tracking-tight text-white flex items-center gap-2"
+          className="text-xl font-bold font-sans tracking-tight text-white flex items-center gap-2.5 group"
+          aria-label="Ayan Pal — AI Consultant, back to top"
         >
-          <span className="text-primary">A</span>yan.
+          <img
+            src="/images/logo-3d.png"
+            alt="Ayan Pal logo"
+            className="w-9 h-9 object-contain drop-shadow-[0_0_12px_rgba(245,166,35,0.45)] group-hover:scale-110 transition-transform duration-300"
+          />
+          <span><span className="text-primary">A</span>yan Pal</span>
         </button>
 
         {/* Desktop Nav */}
